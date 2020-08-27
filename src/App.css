@@ -1,3 +1,30 @@
 .App {
   text-align: center;
 }
+
+.input-app {
+  color: white;
+  background-color: #1dd3b0;
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  outline: none;
+}
+
+.input-app:hover {
+  background-color: #1ac2a0;
+}
+
+.btn {
+  margin-left: 20px;
+  background-color: #1dd3b0;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: bold 12px;
+  height: 22px;
+  width: 5rem;
+  padding: 5px, 5px 5px 5px;
+}

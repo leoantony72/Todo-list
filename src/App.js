@@ -2,36 +2,38 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-
-
-  const [todos, setTodoS] = useState([
-    "Take dogs for walk",
-    "Make cake for me",
-    "Make a Todo-app",
-  ]);
-
+  const [todos, setTodoS] = useState([""]);
   const [input, setInput] = useState("");
+  console.log("hi", input);
 
   const addTodo = (event) => {
-      event.preventDefault();
+    event.preventDefault();
     setTodoS([...todos, input]);
     setInput();
+    console.log(todos);
   };
 
   return (
     <div className="App">
       <h1>Todo App</h1>
+
       <form>
-
-
         <input
+          placeholder="write todo"
+          className="input-app"
           value={input}
           onChange={(event) => setInput(event.target.value)}
         />
-        <button type="submit" onClick={addTodo}>Add Todo</button>
+        <button
+          disabled={!input}
+          className="btn"
+          type="submit"
+          onClick={addTodo}
+        >
+          Add Todo
+        </button>
       </form>
-
-     <ul>
+      <ul>
         {todos.map((todo) => (
           <li>{todo}</li>
         ))}
